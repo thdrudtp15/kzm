@@ -1,0 +1,143 @@
+.buy-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-box {
+  width: 288px;
+  height: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0c0c35;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+
+  .buy-box__header {
+    width: 100%;
+    text-align: right;
+    img {
+      right: 0;
+      width: 20px;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+  span {
+    margin-bottom: 16px;
+    font-family: "ReemKufi500";
+    font-size: 24px;
+  }
+
+  .koz-box {
+    width: 100%;
+    background-color: #000000;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    > img {
+      padding: 9px 8px 9px 16px;
+    }
+  }
+  .total-decript {
+    text-align: center;
+    margin-top: 8px;
+    .total-amount {
+      font-size: 14px;
+      color: #dbdbdb;
+    }
+    .total-price {
+      font-family: "ReemKufi500";
+      margin-top: 8px;
+      color: #ffda02;
+    }
+  }
+
+  .btn-box {
+    display: flex;
+    width: 100%;
+    margin-top: 16px;
+    .btn-x {
+      width: 132px;
+      padding: 14px 0;
+      color: #ffffff;
+      background: #0c0c35;
+      border: 1px solid #353598;
+      border-radius: 8px;
+      margin-right: 8px;
+    }
+    .btn-ok {
+      width: 132px !important;
+      padding: 14px 0;
+      color: #ffffff;
+      background: #353598;
+      border-radius: 8px;
+      margin-top: 0px;
+    }
+  }
+
+  .balance-box {
+    width: 100%;
+    text-align: center;
+    > :nth-child(1) {
+      color: #dbdbdb;
+      font-size: 14px;
+      margin-top: 16px;
+    }
+    > :nth-child(2) {
+      margin-top: 8px;
+      font-family: "ReemKufi500";
+    }
+  }
+
+  .amount {
+    padding: 9px 16px;
+    justify-content: space-between;
+    > input {
+      background: transparent;
+    }
+  }
+
+  .between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    > :nth-child(1) {
+      color: #a8a8a8;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    > :nth-child(2) {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .buy-box {
+    width: 310px;
+
+    span {
+      margin-top: 10px;
+    }
+    .btn-ok {
+      margin-top: 40px;
+    }
+  }
+}
+
+.css-1tu9cnm {
+  filter: invert(100%) sepia(65%) saturate(0%) hue-rotate(141deg)
+    brightness(107%) contrast(101%);
+}

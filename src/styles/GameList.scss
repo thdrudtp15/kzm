@@ -1,0 +1,207 @@
+.game-list {
+    width: 100%;
+    background-color: #0c0c35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+   
+
+    div {
+        box-sizing: border-box;
+    }
+
+    .game-list-inner {
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 40px;
+        min-height: 70vh;
+
+        .game-list-inner__title {
+            font-family: 'ReemKufi600';
+            font-size: 24px;
+            letter-spacing: -0.36px;
+            margin-bottom: 24px;
+            display: flex;
+            img {
+                margin-left: 8px;
+            }
+        }
+        .game-list-inner__switch-search-container {
+            display: flex;
+            margin-bottom: 24px;
+            .game-list-inner__switch-block {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                .game-list-inner__switch-container {
+                    width: 280px;
+                    height: 40px;
+                    background: #030329;
+                    border-radius: 82px;
+                .game-list-inner__switch-box {
+                    width: 100%;
+                    height: 100%;
+                    margin-right: 8px;
+                    display: flex;
+                    position: relative;
+                    
+                    .game-list-inner__switch-text {
+                        width: 50%;
+                        height: 100%;
+                        border-radius: 82px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1;
+                        cursor: pointer;
+                        font-size: 14px;
+                        font-family: "ReemKufi400";
+                    }
+
+                }
+            }
+            }
+            .game-list-inner__search-block {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                height: 40px;
+                .game-list-inner__search-box {
+                    width: 280px;
+                    height: 100%;
+                }
+            }
+        }
+
+
+        .game-list-inner__list-container {
+            width: 100%;
+            padding-bottom: 30px;
+            gap: 24px;
+            margin-bottom: 50px;
+            grid-template-columns: repeat(6, 1fr);
+            display: grid;
+
+            .game-list-inner__game-circle {
+                aspect-ratio: 1/1;
+                border-radius: 180px;
+                position: relative;
+                // overflow: hidden;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                    object-fit: cover;
+                    border-radius: 180px;
+                }
+                .game-list-inner__game-circle--overlay {
+                    position: absolute;
+                    width: 100%;
+                    height: 100.4%;
+                    border-radius: 180px;
+                    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 100%),
+                        linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000 82.88%), transparent 50% / cover no-repeat;
+                    transition: all 0.4s;
+                    opacity: 1;
+                    z-index: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: end;
+                    padding-bottom: 15%;
+                    .overlay-text {
+                        font-size: 16px;
+                        font-family: 'aero700';
+                        font-style: italic;
+                        background: var(--primary-1, linear-gradient(180deg, #a329ff 0%, #52c4ff 100%));
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .game-list-inner__no-list-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 167px;
+            font-size: 14px;
+            line-height: 100%;
+            text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+            color : var(--gray-13,#cecece);
+            font-family: "ReemKufi400";
+        }
+    }
+}
+
+
+
+
+
+@media (max-width : 1024px){
+    .game-list{
+        .game-list-inner{
+            .game-list-inner__list-container{
+                grid-template-columns: repeat(4,1fr);
+               
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .game-list {
+        padding: 0px 16px;
+        .game-list-inner {
+            .game-list-inner__switch-search-container {
+                flex-direction: column;
+                gap:16px;
+                .game-list-inner__switch-block {
+                    width: 100%;
+                }
+                .game-list-inner__search-block {
+                    width: 100%;
+                    justify-content: start;
+                    .game-list-inner__search-box{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//====================
+//320px에서의 임시 @media 쿼리 
+//====================
+
+@media (max-width:567px) {
+    .game-list{
+        .game-list-inner{
+            .game-list-inner__list-container{
+                grid-template-columns: repeat(2,1fr);
+               
+            }
+        }
+    }
+
+}
+
+
+
+
+//=====320px css 속성
+//---게임리스트(가장 큰 div)
+//padding : 0px 16px;
+//---게임서클
+//width : 128.5px;
+//height : width와 동일
+//---GameList-inner__list-container
+//gap : 16px;

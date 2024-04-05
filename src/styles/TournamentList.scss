@@ -1,0 +1,103 @@
+
+
+
+.TournamentList {
+    width: 100%;
+    background-color: #0c0c35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        .TournamentList__banner {
+            width: 100%;
+            max-width: 1160px;
+            height: 160px;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 24px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .TournamentList__banner--content-box {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.6);
+                padding: 20px 20px;
+                display: flex;
+                flex-direction: column;
+                .TournamentList__banner--game-name{
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 20px;
+                    font-family: "ReemKufi700";
+                    letter-spacing: -0.3px;
+                    text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+                }
+                .TournamentList__banner--create-button {
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: end;
+                }
+            }
+    }
+
+    .TournamentList__input {
+        display: flex;
+        margin-bottom: 24px;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0px 24px;
+        .TournamentList__input-block {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            .TournamentList__input-box{
+                width: 280px;
+            }
+        }
+        .left {
+            justify-content: start;
+        }
+        .right {
+            justify-content: end;
+        }
+    
+    }
+    .card-inner {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0px 24px;
+    }
+}  
+
+
+@media (max-width : 1024px) {
+    .TournamentList {
+        .TournamentList__input{
+            flex-direction: column;
+            gap: 16px;
+            .TournamentList__input-block{
+                width: 100%;    
+                .TournamentList__input-box{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 768px){
+    .TournamentList {
+        .TournamentList__input{
+            padding: 0px 16px;
+        }
+    }
+}

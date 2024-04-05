@@ -1,0 +1,141 @@
+
+
+.add-game-id-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .add-modal__content-box {
+    width: 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0c0c35;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    position: relative;
+    .add-modal-box__close {
+        position: absolute;
+        width: fit-content;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+      img {
+        width: 20px;
+        margin-left: auto;
+      }
+    }
+}
+
+    .add-modal-box__header {
+        border-bottom: 1px solid #232364;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        width: 100%;
+        text-align: center;
+        
+    }
+    
+    .add-modal-box__explanation {
+        width: 100%;
+        .explanation-list {
+            list-style-type: decimal;
+            margin-left: 12px;
+        }
+    }
+
+    .add-modal-box__input {
+        width: 100%;
+    }
+
+    .add-modal-box__button {
+        width: 100%;
+        border-radius: 8px;
+        color: #FFF;
+        background-color: #353598;
+        padding: 12px 8px;
+        text-align: center;
+        cursor: pointer;
+        line-height: 100%;
+    }
+
+    .add-modal-succ {
+        width: 100%;
+        text-align: center;
+        .succ__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    }
+
+
+
+
+
+
+
+    .fw600 {
+        font-family: "ReemKufi600";
+        line-height: 100%;
+    }
+    .fw500 {
+        font-family: "ReemKufi500";
+        line-height: 100%;
+    }
+    .fw400 {
+        font-family: "ReemKufi400";
+        line-height: 100%;
+    }
+
+    .fs16 {
+        font-size: 16px;
+    }
+    .fs14 {
+        font-size: 14px;
+    }
+    .fs12 {
+        font-size: 12px;
+    }
+
+    .gray {
+        color: #a8a8a8;
+    }
+    .white{
+        color: #FFF;
+    }
+    .reds {
+        color: red;
+    }
+
+
+    .mb8 {
+        margin-bottom: 8px;
+    }
+    .mb12 {
+        margin-bottom: 12px;
+    }
+    .mb16 {
+        margin-bottom: 16px;
+    }
+    .mb24 {
+        margin-bottom: 24px;
+    }
+
+    .mt8 {
+        margin-top: 8px;
+    }
+
+}

@@ -1,0 +1,642 @@
+.koz-bg-stake {
+  width: 100%;
+  background-color: #0c0c35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .stake__inner {
+    width: 100%;
+    max-width: 1920px;
+    .stake__bg-top {
+      width: 100%;
+      height: 300px;
+      background-image: url("../assets/images/koz-stake-header-bg.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      .stake__header {
+        width: 207px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+        align-items: center;
+        .header__img {
+          width: 160px;
+        }
+        .header__title {
+          font-size: 24px;
+          font-family: "ReemKufi700";
+          margin-bottom: 8px;
+          .title__deco {
+            font-size: 24px;
+            background: linear-gradient(90deg, #2bcbde 0%, #572d7f 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: "ReemKufi700";
+          }
+        }
+        .header__text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.staking-main-background {
+  width: 100%;
+  padding: 0 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.koz-stake-main {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  top: -80px;
+  .main__top-box {
+    display: flex;
+    gap: 24px;
+    .top-box__item {
+      height: 100%;
+      // width: 384px;
+      // height: 240px;
+      min-height: 240px;
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(255, 255, 255, 0.45) 100%
+        ),
+        #5c6de0;
+      background-blend-mode: soft-light, normal;
+      border-radius: 16px;
+      padding: 18px 12px 16px 12px;
+      display: flex;
+      flex-direction: column;
+      // &:not(:last-child) {
+      //   margin-right: 24px;
+      // }
+      .item__title {
+        width: 100%;
+        font-family: "ReemKufi600";
+        text-align: center;
+        margin-bottom: 14px;
+        text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+          0px 3px 4px rgba(123, 12, 12, 0.12),
+          0px 2px 4px rgba(91, 26, 26, 0.14);
+      }
+      .item__box {
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(255, 255, 255, 0.25) 100%
+          ),
+          #38469e;
+        background-blend-mode: soft-light, normal;
+        border-radius: 8px;
+        padding: 12px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        gap: 12px;
+        .box__text {
+          font-size: 14px;
+          text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+            0px 3px 4px rgba(123, 12, 12, 0.12),
+            0px 2px 4px rgba(91, 26, 26, 0.14);
+        }
+        .step2 {
+          overflow: auto;
+          min-height: 84px;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        // Step1 에 있는 월렛커넥트 버튼 스타일
+        .btn-wallet-connect {
+          // border-radius: 24px;
+          // border: 3px solid rgba(10, 10, 10, 0.35);
+          // box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+          //   0px 3px 4px 0px rgba(0, 0, 0, 0.12),
+          //   0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+          // background: linear-gradient(
+          //     180deg,
+          //     rgba(0, 0, 0, 0.25) 0%,
+          //     rgba(255, 255, 255, 0) 100%
+          //   ),
+          //   #0c0c35;
+          // background-blend-mode: soft-light, normal;
+          // padding: 8px 16px;
+          // font-size: 12px;
+          // color: white;
+          // margin: 0 auto;
+
+
+          border: none !important;
+          min-width: 0px  !important;
+          min-height: 0px !important;
+          color: white;
+          font-size: 12px;
+          background-color: transparent ;
+          padding: 8px 10px;
+          width: 100%;
+          height: 100%;
+        }
+        .box__btn-container {
+          display: flex;
+          justify-content: space-between;
+          gap: 6px;
+          .btn-add-network {
+            border-radius: 24px;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.25) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              #ffc6ad;
+            background-blend-mode: soft-light, normal;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-family: "ReemKufi500";
+            color: black;
+            border: 3px solid rgba(10, 10, 10, 0.35);
+            /* 2dp — Elevation */
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+              0px 3px 4px 0px rgba(0, 0, 0, 0.12),
+              0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+          }
+          .btn-add-koz {
+            border-radius: 24px;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.25) 0%,
+                rgba(255, 255, 255, 0) 100%
+              ),
+              #8bd269;
+            background-blend-mode: soft-light, normal;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-family: "ReemKufi500";
+            color: black;
+            border: 3px solid rgba(10, 10, 10, 0.35);
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+              0px 3px 4px 0px rgba(0, 0, 0, 0.12),
+              0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+          }
+        }
+      }
+    }
+  }
+
+  .main__stake-pool-container {
+    margin-top: 80px;
+    .pool-container__title {
+      font-family: "ReemKufi700";
+      font-size: 20px;
+      display: flex;
+      margin-bottom: 16px;
+    }
+    .koz-dao {
+      margin-top: 80px;
+    }
+    .pool-container__box {
+      display: flex;
+      flex-direction: column;
+      .box__item {
+        width: 100%;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.45) 0%,
+            rgba(255, 255, 255, 0.45) 100%
+          ),
+          #5c6de0;
+        background-blend-mode: soft-light, normal;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        padding: 17px 12px 16px 12px;
+        // &:first-child {
+        //   margin-bottom: 24px;
+        // }
+        .item__box {
+          .box__title {
+            font-family: "ReemKufi600";
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            .box__sub {
+              font-size: 12px;
+            }
+          }
+          .box__container {
+            background-color: #38469e;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            .container__video-box {
+              width: 100%;
+              max-width: 200px;
+              height: 280px;
+              margin-right: 16px;
+              .vid-nft {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .container__right {
+              display: flex;
+              width: 100%;
+              justify-content: space-between;
+              .container__stake-zone {
+                width: 100%;
+                max-width: 298px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 16px;
+                .stake-zone__title {
+                  font-family: "ReemKufi500";
+                  text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+                    0px 3px 4px rgba(123, 12, 12, 0.12),
+                    0px 2px 4px rgba(91, 26, 26, 0.14);
+                }
+                .btn-view-contract {
+                  // border-radius: 24px;
+                  // border: 3px solid rgba(10, 10, 10, 0.35);
+                  // text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+                  //   0px 3px 4px rgba(123, 12, 12, 0.12),
+                  //   0px 2px 4px rgba(91, 26, 26, 0.14);
+                  // background: linear-gradient(
+                  //     180deg,
+                  //     rgba(0, 0, 0, 0.25) 0%,
+                  //     rgba(255, 255, 255, 0) 100%
+                  //   ),
+                  //   #0c0c35;
+                  // background-blend-mode: soft-light, normal;
+                  // padding: 8px 16px;
+                  // font-size: 12px;
+                  margin: 16px 0;
+                  cursor: pointer;
+                }
+                .stake-zone__text {
+                  font-size: 12px;
+                }
+                .dao-text {
+                  color: #ffda02;
+                  text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+                    0px 3px 4px rgba(123, 12, 12, 0.12),
+                    0px 2px 4px rgba(91, 26, 26, 0.14);
+                  font-size: 24px;
+                  font-family: "ReemKufi500";
+                  margin-bottom: 16px;
+                }
+                .stake-zone__title-dao {
+                  font-family: "ReemKufi500";
+                  text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+                    0px 3px 4px rgba(123, 12, 12, 0.12),
+                    0px 2px 4px rgba(91, 26, 26, 0.14);
+                  margin-bottom: 8px;
+                }
+                .stake-zone__paragraph {
+                  max-width: 782px;
+                  text-align: center;
+                  font-size: 14px;
+                  text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.2),
+                    0px 3px 4px rgba(123, 12, 12, 0.12),
+                    0px 2px 4px rgba(91, 26, 26, 0.14);
+                  color: #e1dfff;
+                }
+                .btn-wallet-connect {
+                  // margin-top: 16px;
+                  // border-radius: 24px;
+                  // border: 3px solid rgba(10, 10, 10, 0.35);
+                  // box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+                  //   0px 3px 4px 0px rgba(0, 0, 0, 0.12),
+                  //   0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+                  // background: linear-gradient(
+                  //     180deg,
+                  //     rgba(0, 0, 0, 0.25) 0%,
+                  //     rgba(255, 255, 255, 0) 100%
+                  //   ),
+                  //   #0c0c35;
+                  // background-blend-mode: soft-light, normal;
+                  // padding: 8px 16px;
+                  // font-size: 12px;
+                  // color: white;
+                  min-width: 0px  !important;
+                  min-height: 0px !important;
+                  color: white;
+                  font-size: 12px;
+                  background-color: transparent ;
+                  padding: 8px 10px;
+                  width: 100%;
+                  height: 100%;
+                }
+                .stake-zone__reward-box {
+                  width: 100%;
+                  .reward-box__list {
+                    width: 100%;
+                    .list__item {
+                      display: flex;
+                      justify-content: space-between;
+                      &:not(:last-child) {
+                        margin-bottom: 16px;
+                      }
+                      .item__title {
+                        font-size: 14px;
+                      }
+                      .item__amount {
+                        color: #ffda02;
+                        text-shadow: 0px 1px 5px 0px rgba(136, 13, 13, 0.2),
+                          0px 3px 4px 0px rgba(123, 12, 12, 0.12),
+                          0px 2px 4px 0px rgba(91, 26, 26, 0.14);
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                  .btn-claim {
+                    // min-height: 38px !important;
+                    // border-radius: 24px;
+                    // border: 3px solid rgba(10, 10, 10, 0.35);
+                    // /* 2dp — Elevation */
+                    // box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+                    //   0px 3px 4px 0px rgba(0, 0, 0, 0.12),
+                    //   0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+                    // background: linear-gradient(
+                    //     180deg,
+                    //     rgba(0, 0, 0, 0.25) 0%,
+                    //     rgba(255, 255, 255, 0) 100%
+                    //   ),
+                    //   #ffae02;
+                    // background-blend-mode: soft-light, normal;
+                    // width: 100%;
+                    // margin-top: 24px;
+                    // text-shadow: 0px 1px 5px 0px rgba(136, 13, 13, 0.2),
+                    //   0px 3px 4px 0px rgba(123, 12, 12, 0.12),
+                    //   0px 2px 4px 0px rgba(91, 26, 26, 0.14);
+                    // font-family: "ReemKufi500";
+                    // padding: 4px 0;
+
+                    min-width: 0px !important;
+                    min-height: 28px !important;
+                    background: transparent;
+                    box-shadow: none;
+                    border: none;
+                    width: 100%;
+                    color: white;
+                    padding: 4px 0;
+                    margin-top: auto;
+                    
+                    svg {
+                      width: 16px !important;
+                      height: 16px !important;
+                    }
+
+                  }
+                }
+                .stake-zone__input-box {
+                  display: flex;
+                  flex-direction: column;
+                  text-align: center;
+                  width: 100%;
+                  height: 100%;
+                  .input-box__title {
+                    font-size: 14px;
+                    text-shadow: 0px 1px 5px 0px rgba(136, 13, 13, 0.2),
+                      0px 3px 4px 0px rgba(123, 12, 12, 0.12),
+                      0px 2px 4px 0px rgba(91, 26, 26, 0.14);
+                    margin-bottom: 16px;
+                  }
+                  .input-box__input {
+                    padding: 10px 12px;
+                    background-color: #000000;
+                    font-size: 14px;
+                    width: 100%;
+                    border: 1px solid #d3d3d3;
+                    height: 34px;
+                  }
+                  .btn-claim {
+                    // min-height: 38px !important;
+                    // border-radius: 24px;
+                    // border: 3px solid rgba(10, 10, 10, 0.35);
+                    // /* 2dp — Elevation */
+                    // box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+                    //   0px 3px 4px 0px rgba(0, 0, 0, 0.12),
+                    //   0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+                    // background: linear-gradient(
+                    //     180deg,
+                    //     rgba(0, 0, 0, 0.25) 0%,
+                    //     rgba(255, 255, 255, 0) 100%
+                    //   ),
+                    //   #ffae02;
+                    // background-blend-mode: soft-light, normal;
+                    // width: 100%;
+                    // text-shadow: 0px 1px 5px 0px rgba(136, 13, 13, 0.2),
+                    //   0px 3px 4px 0px rgba(123, 12, 12, 0.12),
+                    //   0px 2px 4px 0px rgba(91, 26, 26, 0.14);
+                    // font-family: "ReemKufi500";
+                    // padding: 4px 0;
+                    // margin-top: auto;
+
+                    min-width: 0px !important;
+                    min-height: 28px !important;
+                    background: transparent;
+                    box-shadow: none;
+                    border: none;
+                    width: 100%;
+                    color: white;
+                    padding: 4px 0;
+                    margin-top: auto;
+                    
+                    svg {
+                      width: 16px !important;
+                      height: 16px !important;
+                    }
+
+                  }
+                }
+              }
+              .dao-zone {
+                max-width: 100%;
+              }
+            }
+            .dao-center {
+              justify-content: center;
+              width: 100%;
+            }
+            .btn-detail {
+              display: none;
+              margin-top: 16px;
+              .detail__img {
+                width: 100%;
+                background-color: #38469e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .koz-stake-main {
+    .main__top-box {
+      .top-box__item {
+        //min-width: 224px;
+        .item__title {
+          font-size: 14px;
+        }
+        .item__box {
+          .box__btn-container {
+            flex-direction: column;
+            .btn-add-network {
+              margin-bottom: 12px;
+            }
+            .btn-add-network,
+            .btn-add-koz {
+              height: 28px;
+              padding: 0;
+            }
+          }
+          .box__text {
+            font-size: 12px;
+          }
+          .step2 {
+            // height: 64px;
+            height: fit-content;
+          }
+          .btn-wallet-connect {
+            width: 100%;
+            max-width: 190px;
+            // 메타마스크 얼굴 지움
+            > img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .main__stake-pool-container {
+      .pool-container__box {
+        .box__item {
+          .item__box {
+            .box__container {
+              flex-direction: column;
+            }
+            .container__right {
+              width: 100%;
+              flex-direction: column;
+              align-items: center;
+              .container__stake-zone {
+                max-width: 920px !important;
+                .stake-zone__input-box {
+                  .input-box__input {
+                    margin-bottom: 34px;
+                  }
+                }
+              }
+            }
+            .btn-detail {
+              display: inline !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.border3px__outter{
+  padding: 3px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%), #5C6DE0;
+  background-blend-mode: soft-light, normal;
+  width: 100%;
+  &.mb24{
+    margin-bottom: 24px;
+  }
+}
+.border3px__inner {
+  padding: 3px;
+  border-radius: 8px;
+  // background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%), #5C6DE0;
+  // background-blend-mode: soft-light, normal;
+  background: rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+@media (max-width: 768px) {
+  .staking-main-background {
+    padding: 0;
+  }
+  .koz-stake-main
+    .main__stake-pool-container
+    .pool-container__box
+    .box__item
+    .item__box
+    .box__container
+    .container__right
+    .container__stake-zone
+    .staking-main-background {
+    padding: 0 0 20px;
+  }
+  .koz-stake-main {
+    padding: 0 16px;
+    .main__top-box {
+      flex-direction: column;
+      align-items: center;
+      .top-box__item {
+        width: 100%;
+        max-width: 719px;
+        // &:not(:last-child) {
+        //   margin-right: 0;
+        //   margin-bottom: 24px;
+        // }
+      }
+    }
+    .main__stake-pool-container {
+      .pool-container__box {
+        .box__item {
+          .item__box {
+            .box__container {
+              .container__right {
+                .container__stake-zone {
+                  .stake-zone__text {
+                    text-align: center;
+                  }
+                  .stake-zone__paragraph {
+                    > br {
+                      display: none;
+                    }
+                  }
+                }
+                .dao-zone {
+                  padding: 0;
+                }
+              }
+            }
+            .dao {
+              padding: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

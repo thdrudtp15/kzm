@@ -1,0 +1,297 @@
+.TokenStaking {
+    width: 100%;
+    background-color: #0c0c35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .token-staking__banner--container {
+        width: 100%;
+        max-width: 800px;
+        height: 244px;
+        object-fit: cover;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .banner__title {
+            text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+            font-family: "ReemKufi600";
+            line-height: 100%;
+        }
+        .banner__balance{
+            text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+            font-family: "ReemKufi400";
+            line-height: 100%;
+        }
+        .banner__token {
+            text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+            font-family: "ReemKufi500";
+            line-height: 100%;
+        }
+    }
+
+    .token-staking__inner--container {
+        padding : 0px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        max-width: 1200px;
+        min-height: 600px;
+        .token__information--box{
+            width: 100%;
+            background: #00002a;
+            display: flex;
+            flex-direction: column;
+        }
+        .preview__box--PC {
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .preview__box--info {
+            width: 843px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .token__information--drop {
+            padding: 24px 8px;
+            justify-content: center;
+            border-top: 1px solid var(--stroke-10, #171740);
+            gap : 42px;
+            display: none;
+        }
+        .drop-unfold {
+            display: flex;
+        }
+        .token__name-image{
+            display: flex;
+            gap : 12px;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .token__value {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .input__box{
+            width: 100%;
+        }
+        .buttons__box{
+            display: flex;
+            gap : 16px;
+        }
+        .reward__box {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        .reward__value--box{
+            display: flex;
+            justify-content: center;
+        }
+        }
+        .token-staking__dropdown-button{
+            display: flex;
+            align-items: center;
+           .material-symbols-outlined{
+            font-size: 1.4rem;
+            font-weight: 700;
+            transition: 0.3s all;
+        }
+            .expended {
+                transform: rotate(180deg);
+            }
+        }
+        .preview__box--mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            border-bottom: 1px solid var(--stroke-10, #171740);
+            .token__name-image--mobile {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .token__value--mobile-preview {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+            }
+        }
+        .preveiw__box--info-mobile {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 24px; 
+        }
+        .token__information--drop-mobile{
+            padding: 24px;
+            .token__value--mobile{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .token__value--mobile-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+            }
+            .token__amount--box-mobile{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+            }
+            .buttons__box--mobile{
+                width: 100%;
+                display: flex;
+                gap : 16px;
+            }
+        }
+        .token__reward--box-mobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            .reward__box--mobile{
+                display: flex;
+                flex-direction: column;
+                gap :4px;
+            }
+            .reward__value--box--mobile{
+                display: flex;
+                justify-content: center;
+                gap: 4px;
+            }
+        }
+        .close-btn__box{
+            padding: 0px 24px 24px 24px;
+        }
+    }
+
+
+
+    //================
+    //Module
+    //================
+    
+    .mb40{
+        margin-bottom: 40px;
+    }
+    .mb24{
+        margin-bottom: 24px;
+    }
+    .mb12 {
+        margin-bottom: 12px;
+    }
+    .mb16 {
+        margin-bottom: 16px;
+    }
+    .mb42{
+        margin-bottom: 42px;
+    }
+
+    .fs14 {
+        font-size: 14px;
+    }
+    .fs18 {
+        font-size: 18px;
+    }
+    .fs24 {
+        font-size: 24px;
+    }
+    .fs30{
+        font-size: 30px;
+    }
+
+    .fw400 {
+        font-family: "ReemKufi400";
+        line-height: 100%;
+    }
+    .fw500{
+        font-family: "ReemKufi500";
+        line-height: 100%;
+    }
+    .fw600{
+        font-family: "ReemKufi600";
+        line-height: 100%;
+    }
+    .fw700{
+        font-family: "ReemKufi700";
+        line-height: 100%;
+    }
+
+
+    .color-yellow {
+        color: #FFDA02;
+    }
+    .color-green {
+        color: #7cdf9e;
+    }
+    .color-gray {
+        color: #dbdbdb;
+    }
+    .color-gray2 {
+        color: #a8a8a8;
+    }
+    .color-purple {
+        color : #7c7cdf;
+    }
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .font-shadow {
+        text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+    }
+}
+
+
+
+@media (max-width : 1024px) {
+    .TokenStaking {
+        .token-staking__inner--container{
+            .preview__box--mobile {
+            
+            }
+        }
+    }
+}
+
+
+
+@media (max-width : 768px) {
+    .TokenStaking {
+        .token-staking__inner--container {
+            padding: 0px 16px;
+        .preveiw__box--info-mobile {
+            flex-direction: column;
+            .token__value--mobile-preview {
+                flex-direction: row;
+            }
+        }
+    }
+}
+}

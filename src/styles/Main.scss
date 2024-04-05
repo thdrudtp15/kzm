@@ -1,0 +1,1206 @@
+
+.main {
+  width: 100%;
+  background-color: #0c0c35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-inner {
+  width: 100%;
+  max-width: 1200px;
+  .tt-container-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px; // 셀 사이의 간격 설정
+    margin-top: 24px;
+    .tt-container_cell {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      max-height: 300px;
+      .ttimg,
+      .trapezoid {
+        width: 100%;
+        object-fit: cover;
+      }
+      .trapezoid {
+        position: absolute;
+        bottom: 0;
+      }
+      &:hover .trapezoid {
+        display: none;
+      }
+      // .black {
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   background-color: rgba(0, 0, 0, 0.7);
+      //   width: 100%;
+      //   height: 100%;
+      //   visibility: hidden;
+      //   z-index: 99;
+      //   opacity: 0;
+      //   transition: opacity 1s ease;
+      // }
+
+      // &:hover .black {
+      //   opacity: 1;
+      //   visibility: visible;
+      // }
+
+       .black {
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 101%;
+        height: 101%;
+        // visibility: hidden;
+        z-index: 99;
+        opacity: 1;
+        clip-path: polygon(0 40%, 100% 74%, 100% 100%, 0% 100%);
+        transition: all 1s;
+      }
+
+      &:hover .black {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+     
+
+      .title {
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "ReemKufi500";
+        font-size: 24px;
+        z-index: 999;
+        padding-bottom: 8px;
+        .title__text {
+          font-family: "ReemKufi500";
+          font-size: 24px;
+          .text__sample {
+            background: linear-gradient(180deg, #a329ff 0%, #52c4ff 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-left: 4px;
+            font-family: "ReemKufi700";
+          }
+        }
+      }
+    }
+  }
+
+  .recentWin-container {
+    margin-top: 80px;
+    display: flex;
+
+    .win-intro-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 384px;
+      background-color: #00002a;
+      padding: 90px 16px;
+      margin-right: 24px;
+      .title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+        font-family: "ReemKufi600";
+        font-size: 30px;
+        text-shadow: 0px 2px 4px rgba(91, 26, 26, 0.14),
+          0px 3px 4px rgba(123, 12, 12, 0.12),
+          0px 1px 5px rgba(136, 13, 13, 0.2);
+        > img {
+          margin-left: 8px;
+        }
+      }
+      .title-sub {
+        margin-top: 24px;
+        > p {
+          color: #dbdbdb;
+          text-shadow: 0px 2px 4px rgba(91, 26, 26, 0.14),
+            0px 3px 4px rgba(123, 12, 12, 0.12),
+            0px 1px 5px rgba(136, 13, 13, 0.2);
+        }
+      }
+    }
+    .grid-win-user-info-box {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      .cell-border3px {
+        padding:3px;
+        background: linear-gradient(180deg, #172478, #8694e0);
+        background-blend-mode: soft-light, normal;
+        border-radius: 8px;
+      }
+      .cell {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(255, 255, 255, 0.25) 100%
+          ),
+          #38469e;
+        background-blend-mode: soft-light, normal;
+        padding: 16px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        .cell__userInfo {
+          display: flex;
+          justify-content: space-between;
+          .cell__userName {
+            text-shadow: 0px 2px 4px rgba(91, 26, 26, 0.14),
+              0px 3px 4px rgba(123, 12, 12, 0.12),
+              0px 1px 5px rgba(136, 13, 13, 0.2);
+            font-family: "ReemKufi500";
+          }
+          .cell__wallet {
+            width: 79px;
+            background-color: #0c0c35;
+            border-radius: 39px;
+            padding: 0 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+
+        .cell__date {
+          font-size: 12px;
+          font-family: "ReemKufi400";
+          margin-top: 8px;
+        }
+
+        .winer-amount {
+          display: flex;
+          justify-content: space-between;
+          margin-top: auto;
+          > div {
+            color: #ffda02;
+            font-size: 20px;
+            font-family: "ReemKufi500";
+            text-shadow: 0px 2px 4px rgba(91, 26, 26, 0.14),
+              0px 3px 4px rgba(123, 12, 12, 0.12),
+              0px 1px 5px rgba(136, 13, 13, 0.2);
+          }
+        }
+        .title {
+          display: flex;
+          font-family: "ReemKufi600";
+          font-size: 30px;
+          align-items: center;
+          > img {
+            margin-left: 8px;
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .title-sub {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  .no-data__today-game {
+    width: 100%;
+    height: 300px;
+    background-color: #00002a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .no-data__winner {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00002a;
+    min-height: 321px;
+  }
+  .no-data__game-list{
+    width: 100%;
+    margin-top: 24px;
+    background-color: #00002a;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.main__slider {
+  width: 100%;
+  .slider {
+    height: 600px;
+  }
+  .slider__item1 {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+
+    .item__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  .buy-ntf-box-contaier {
+    margin-top: -70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    .buy-ntf-box__border3px{
+      padding: 3px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%), #5C6DE0 ;
+      background-blend-mode: soft-light, normal;
+      &:nth-child(1) {
+        margin-right: 20px;
+      }
+    }
+    .buy-ntf-box {
+      width: 384px;
+      height: 560px;
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(255, 255, 255, 0.45) 100%
+        ),
+        #5c6de0;
+      background-blend-mode: soft-light, normal;
+      border-radius: 16px;
+      // &:nth-child(1) {
+      //   margin-right: 20px;
+      // }
+      .progress-box {
+        width: 100%;
+        background-color: #00002a;
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin-top: 16px;
+        .progress-contion {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 8px;
+          .progress-account {
+            font-size: 14px;
+          }
+        }
+        .progress {
+          --bs-progress-bg: #d9d9d9;
+          display: flex;
+          overflow: hidden;
+          background-color: var(--bs-progress-bg);
+          width: 100%;
+          height: 8px;
+          border-radius: 8px;
+        }
+
+        .progress .progress-bar {
+          background: linear-gradient(90deg, #a329ff 0%, #52c4ff 100%);
+        }
+      }
+      .title {
+        display: flex;
+        justify-content: center;
+        padding-top: 13px;
+        padding-bottom: 11px;
+        font-family: "ReemKufi600";
+        font-size: 30px;
+        text-align: center;
+        text-shadow: 0px 2px 4px rgba(91, 26, 26, 0.14),
+          0px 3px 4px rgba(123, 12, 12, 0.12),
+          0px 1px 5px rgba(136, 13, 13, 0.2);
+      }
+      .title-content__border3px {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 3px;
+        width: fit-content;
+        border-radius: 8px;
+        margin: auto;
+      }
+      .title-content {
+        width: 360px;
+        padding: 0 38px;
+        height: 477px;
+        background-color: #38469e;
+        border-radius: 8px;
+        > video {
+          width: 100%;
+        }
+
+        .nft-info-box {
+          .lst-decript {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+
+        .bytbtn {
+          cursor: pointer;
+          margin-top: 12px;
+          display: flex;
+          justify-content: center;
+          > img {
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  width: 100%;
+  padding: 100px 24px;
+
+  .today-tournament {
+    width: 100%;
+    font-family: "ReemKufi600";
+    font-size: 30px;
+    display: flex;
+    margin-top: 80px;
+    text-shadow: 0px 2px 4px rgba(91, 26, 26, 0.14),
+      0px 3px 4px rgba(123, 12, 12, 0.12), 0px 1px 5px rgba(136, 13, 13, 0.2);
+
+    > img {
+      padding-left: 8px;
+    }
+    > span {
+      width: 2px;
+      margin-right: 16px;
+      background: linear-gradient(180deg, #a329ff 0%, #52c4ff 100%);
+    }
+  }
+
+  .main-container__main {
+    display: flex;
+    align-items: center;
+    .main_description {
+      margin-right: 100px;
+      // main_description 클래스의 직계 자식 요소 중에서 모든 요소를 선택
+      > *:first-child {
+        color: #0c0c35;
+        text-shadow: -1px -1px 0 #2bcbde, 1px -1px 0 #2bcbde, -1px 1px 0 #2bcbde,
+          1px 1px 0 #2bcbde;
+        font-family: "ReemKufi700";
+        font-size: 60px;
+      }
+      > *:last-child {
+        color: white;
+        font-family: "ReemKufi700";
+        font-size: 60px;
+      }
+    }
+  }
+
+  // 처음 애니메이션
+  .circle {
+    background: linear-gradient(180deg, #2bcbde 0%, #572d7f 100%);
+    width: 467.8992px;
+    height: 540px;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    // overflow: hidden;
+    animation: morph 4s linear infinite;
+    /* 추가된 CSS 속성 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; 
+    animation: morph2 3s linear infinite;
+  }
+
+  @keyframes morph {
+    0%,
+    100% {
+      border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    34% {
+      border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    67% {
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+  }
+}
+
+@keyframes morph2 {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 80% / 30% 60% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+
+
+.current-info {
+  margin-top: 71px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0c0c35;
+  gap: 24px;
+  .current-info__item--border3px{
+    padding: 3px;
+    width: 100%;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 0, 0, 0.45) 100%), #5C6DE0 ;
+    background-blend-mode: soft-light, normal;
+  }
+  .current-info__item-box--border3px{
+    padding: 3px;
+    width: 100%;
+    // background: linear-gradient(180deg, #2E2E9E 0%, #1E1E69 100%), #38469E;
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px;
+  }
+  .current-info__item {
+    width: 100%;
+    padding: 41px 9px 13px 9px;
+    text-align: center;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(255, 255, 255, 0.45) 100%
+      ),
+      #5c6de0;
+    background-blend-mode: soft-light, normal;
+    border-radius: 16px;
+
+    .current-info__item-box {
+      // min-width: 263px;
+      min-height: 150px;
+      background: linear-gradient(180deg, #2e2e9e 0%, #1e1e69 100%), #38469e;
+      background-blend-mode: soft-light, normal;
+      border-radius: 8px;
+      padding-top: 30px;
+    }
+
+    .current-info__item-box.special {
+      padding-top: 0;
+    }
+
+    .info__text {
+      width: 100%;
+      font-family: "ReemKufi400";
+      font-size: 20px;
+      text-shadow: 0px 2px 4px rgba(91, 26, 26, 0.14),
+        0px 3px 4px rgba(123, 12, 12, 0.12), 0px 1px 5px rgba(136, 13, 13, 0.2);
+    }
+    .info__number-text {
+      font-family: "ReemKufi700";
+      font-size: 40px;
+      text-align: center;
+      color: #ffda02;
+    }
+    .number-text__box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 90px;
+      justify-content: space-between;
+      .coin-box {
+        width: 100%;
+        padding: 0px 16px;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        .info__number-text {
+          font-family: "ReemKufi700";
+          font-size: 16px;
+          text-align: center;
+          color: #ffda02;
+        }
+      }
+      img {
+        width: 16px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.main__game-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-track  {
+    background-color: aliceblue;
+  }
+  .game-list__header {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    .header__title {
+      font-family: "ReemKufi500";
+      font-size: 30px;
+    }
+    .btn-more {
+      font-family: "ReemKufi500";
+      font-size: 20px;
+      color: #4183bd;
+      background-color: transparent;
+    }
+  }
+  .list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 16px;
+    gap: 16px;
+    .list__item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      width: 100%;
+      height: 226px;
+      position: relative;
+      .game-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+      }
+      .item__sample-box {
+        position: absolute;
+        top: 140px;
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        .sample-box__text {
+          background: linear-gradient(180deg, #a329ff 0%, #52c4ff 100%);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-left: 4px;
+          font-family: "ReemKufi700";
+        }
+      }
+    }
+  }
+}
+
+.endbar {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #a329ff 0%, #52c4ff 100%);
+}
+
+.partners {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #00002a;
+  padding: 80px 0;
+  .partners__main {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    img {
+      width: 282px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-inner {
+    width: 100%;
+    .tt-container-grid {
+      display: flex;
+      flex-direction: column;
+      .tt-container_cell {
+        max-width: 1024px;
+        .ttimg {
+          max-width: 1024px;
+        }
+        .trapezoid {
+          max-width: 1024px;
+        }
+        .black {
+          max-width: 1024px;
+        }
+      }
+    }
+
+    .recentWin-container {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      .win-intro-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1024px;
+        background-color: #00002a;
+        padding: 90px 16px;
+        margin-right: 0px;
+        .title {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          text-align: left;
+          font-family: "ReemKufi600";
+          font-size: 30px;
+          > img {
+            margin-left: 8px;
+          }
+        }
+        .title-sub {
+          margin-top: 24px;
+          > p {
+            color: #dbdbdb;
+          }
+        }
+      }
+      .grid-win-user-info-box {
+        margin-top: 24px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        .cell {
+          width: 100%;
+          background-color: #38469e;
+          padding: 16px;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          .cell__userInfo {
+            .cell__wallet {
+              width: 79px;
+              background-color: #0c0c35;
+              border-radius: 39px;
+              padding: 0 8px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+
+          .cell__date {
+            font-size: 12px;
+            font-family: "ReemKufi400";
+            margin-top: 8px;
+          }
+
+          .title {
+            display: flex;
+            font-family: "ReemKufi600";
+            font-size: 30px;
+            align-items: center;
+            > img {
+              margin-left: 8px;
+              width: 30px;
+              height: 30px;
+            }
+          }
+          .title-sub {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .partners {
+    .partners__main {
+      img {
+        width: 282px;
+        &:not(:last-child) {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    width: 100%;
+    padding: 100px 16px;
+
+    .today-tournament {
+      width: 100%;
+      height: auto;
+      font-family: "ReemKufi600";
+      font-size: 20px;
+      display: flex;
+      > img {
+        padding-left: 8px;
+      }
+    }
+
+    .main-container__main {
+      display: block;
+      align-items: center;
+      .main_description {
+        width: 100%;
+        text-align: center;
+        // main_description 클래스의 직계 자식 요소 중에서 모든 요소를 선택
+        > *:first-child {
+          color: #0c0c35;
+          text-shadow: -1px -1px 0 #2bcbde, 1px -1px 0 #2bcbde,
+            -1px 1px 0 #2bcbde, 1px 1px 0 #2bcbde;
+          font-family: "ReemKufi700";
+          font-size: 30px;
+        }
+        > *:last-child {
+          color: white;
+          font-family: "ReemKufi700";
+          font-size: 40px;
+        }
+      }
+    }
+
+    // 처음 애니메이션
+    .circle {
+      margin-top: 16px;
+      background: linear-gradient(180deg, #2bcbde 0%, #572d7f 100%);
+      width: 100%;
+      height: 100%;
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      //overflow: hidden;
+      animation: morph 3s linear infinite;
+      /* 추가된 CSS 속성 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5%;
+    }
+
+    .circle img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @keyframes morph {
+      0%,
+      100% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+      }
+      34% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+      }
+      67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+      }
+    }
+  }
+
+  .main-container {
+    padding: 44px 16px;
+  }
+
+  .current-info {
+    margin-top: 45px;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    background: #0c0c35;
+    gap: 16px;
+    .current-info__item {
+      width: 100%;
+      padding: 41px 4px 13px 4px;
+      text-align: center;
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(255, 255, 255, 0.45) 100%
+        ),
+        #5c6de0;
+      background-blend-mode: soft-light, normal;
+      border-radius: 16px;
+
+      .current-info__item-box {
+        // min-width: 263px;
+        min-height: 150px;
+
+        border-radius: 8px;
+        padding-top: 30px;
+      }
+
+      .current-info__item-box.special {
+        padding-top: 0;
+      }
+
+      .info__text {
+        width: 100%;
+        font-family: "ReemKufi400";
+        font-size: 14px;
+      }
+      .info__number-text {
+        font-family: "ReemKufi700";
+        font-size: 40px;
+        text-align: center;
+        color: #ffda02;
+      }
+      .number-text__box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90px;
+        justify-content: space-between;
+        .coin-box {
+          width: 100%;
+          padding: 0px 15px;
+          margin-left: 0px;
+          height: 72px;
+          display: flex;
+          justify-content: space-between;
+          .info__number-text {
+            font-family: "ReemKufi700";
+            font-size: 16px;
+            text-align: center;
+            color: #ffda02;
+          }
+        }
+        img {
+          width: 16px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .main-inner {
+    width: 100%;
+    max-width: 1200px;
+    .tt-container-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      // grid-template-rows: repeat(4, 1fr);
+      gap: 24px; // 셀 사이의 간격 설정
+      margin-top: 24px;
+      .tt-container_cell {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .ttimg,
+        .trapezoid {
+          width: 100%;
+        }
+        .trapezoid {
+          position: absolute;
+          bottom: 0;
+        }
+        &:hover .trapezoid {
+          display: none;
+        }
+        // .black {
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   background-color: rgba(0, 0, 0, 0.7);
+        //   width: 100%;
+        //   height: 100%;
+        //   visibility: hidden;
+        //   z-index: 99;
+        //   opacity: 0;
+        //   transition: opacity 1s ease;
+        // }
+
+        // &:hover .black {
+        //   opacity: 1;
+        //   visibility: visible;
+        // }
+
+        .title {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: "ReemKufi500";
+          font-size: 16px;
+          z-index: 999;
+          padding: 0px 16px 17px 16px;
+          > img {
+            max-width: 144px;
+            max-width: 80px;
+          }
+          .title__text {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .recentWin-container {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      .win-intro-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 768px;
+        background-color: #00002a;
+        padding: 77px 16px;
+        margin-right: 0px;
+        .title {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          text-align: left;
+          font-family: "ReemKufi600";
+          font-size: 20px;
+          > img {
+            margin-left: 8px;
+          }
+        }
+        .title-sub {
+          margin-top: 24px;
+          > p {
+            color: #dbdbdb;
+          }
+        }
+      }
+      .grid-win-user-info-box {
+        margin-top: 24px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 24px;
+        .cell {
+          width: 100%;
+          //min-width: 288px;
+          min-height: 140px;
+          background-color: #38469e;
+          padding: 16px;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          .cell__userInfo {
+            .cell__wallet {
+              width: 79px;
+              background-color: #0c0c35;
+              border-radius: 39px;
+              padding: 0 8px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+
+          .cell__date {
+            font-size: 12px;
+            font-family: "ReemKufi400";
+            margin-top: 8px;
+          }
+
+          .title {
+            display: flex;
+            font-family: "ReemKufi600";
+            font-size: 30px;
+            align-items: center;
+            > img {
+              margin-left: 8px;
+              width: 30px;
+              height: 30px;
+            }
+          }
+          .title-sub {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .main__game-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+      border-radius: 8px;
+    }
+    ::-webkit-scrollbar-track  {
+      background-color: aliceblue;
+    }
+    .game-list__header {
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      .header__title {
+        font-family: "ReemKufi500";
+        font-size: 30px;
+      }
+      .btn-more {
+        font-family: "ReemKufi500";
+        font-size: 20px;
+        color: #4183bd;
+        background-color: transparent;
+      }
+    }
+    .list {
+      width: 100%;
+      display: grid;
+      margin-top: 16px;
+      gap: 16px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        background-color: transparent;
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(62, 57, 211, 0.5);
+        border-radius: 8px;
+      }
+      ::-webkit-scrollbar-track  {
+        background-color: aliceblue;
+      }
+    }
+  }
+
+  .main__slider {
+    margin-top: 100px;
+    .slider {
+      height: 350px;
+    }
+    .buy-ntf-box-contaier {
+      width: 100%;
+      margin-top: -28px;
+      display: flex;
+      justify-content: start;
+      overflow: auto;
+      position: absolute;
+      padding : 0px 20px 50px 20px;
+      &::-webkit-scrollbar {
+        background-color: transparent;
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(62, 57, 211, 0.5);
+        border-radius: 8px;
+      }
+      ::-webkit-scrollbar-track  {
+        background-color: aliceblue;
+      }
+      .buy-ntf-box {
+        width: 100%;
+        min-width: 288px;
+        height: 422px;
+        background-color: #5c6de0;
+        border-radius: 16px;
+        .title {
+          font-family: "ReemKufi600";
+          font-size: 20px;
+          text-align: center;
+        }
+        .title-content {
+          width: 268px;
+          height: 349px;
+          margin: auto;
+          background-color: #38469e;
+          border-radius: 8px;
+          padding: 0px 22px;
+          > video {
+            width: 70%;
+            transform: translate(25%, 0%);
+          }
+
+          .lst-decript {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            > :nth-child(1) {
+              font-size: 14px;
+            }
+            > :nth-child(2) {
+              font-size: 14px;
+            }
+          }
+
+          .bytbtn {
+            margin-top: 16px;
+            // margin: auto;
+            > img {
+              position: absolute;
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .partners {
+    margin-top: 140px;
+    padding: 60px 0;
+    .partners__main {
+      width: 100%;
+      img {
+        width: 200px;
+      }
+    }
+  }
+}

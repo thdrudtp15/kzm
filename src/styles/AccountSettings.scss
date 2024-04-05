@@ -1,0 +1,199 @@
+.account-settings {
+    width: 100%;
+    background-color: #0c0c35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px;
+    .accoubt-settings__inner {
+        width: 100%;
+        max-width: 1200px;
+        min-height: 550px;
+        .tab__container {
+            width: 100%;
+            overflow: auto;
+            border-bottom: 1px solid #232364;
+            margin-bottom: 24px;
+        }
+        .tab__container::-webkit-scrollbar {
+            display: none;
+        }
+        .tab__box {
+            width: fit-content;
+            display: flex;
+        }
+        .tab__button{
+            padding: 12px;
+            font-size: 14px;
+            text-align: center;
+            font-family: "ReemKufi500";
+            line-height: 100%;
+            color: var(--gray-10,#a8a8a8);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .tab__selected {
+           color: var(--ffae-02,#ffae02);
+           border-bottom: 2px solid #ffae02;
+        }
+        .account__content--title{
+            font-family: "ReemKufi500";
+            line-height: 100%;
+            font-size: 14px;
+            color: var(--gray-10,#a8a8a8);
+            margin-bottom: 8px;
+        }
+        .account__content--data{
+            padding: 12px;
+            font-size: 14px;
+            font-family: "ReemKufi400";
+            line-height: 100%;
+            background: #030329;
+            border: 1px solid var(--sec-nav-18,#232364);
+            width: 100%;
+            max-width: 282px;
+            color: var(--gray-10,#a8a8a8);
+            margin-bottom: 24px;
+            height: 40px;
+        }
+        .wallet {
+            margin-bottom: 0px;
+            height: fit-content;
+            padding: 0px;
+            .address-text{
+                color: var(--gray-10,#a8a8a8);
+                font-family: "ReemKufi400";
+                line-height: 100%;
+                font-size: 14px;
+                background: transparent;
+                border: none;
+                resize: none;
+                width: 100%;
+                height: fit-content;
+                padding: 12px;
+
+            }
+        }
+        .purchases__content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 415px;
+            color: var(--gray-10,#a8a8a8);
+            font-size: 16px;
+            font-family: "ReemKufi400";
+            line-height: 100%;
+        }
+        .gameid__dropdown--box {
+            width: 100%;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #353598;
+            margin-bottom: 16px;
+       }
+       .gameid__dropdown{
+            width: 100%;
+            max-width: 250px;
+       }
+       .gameid__title {
+        margin-bottom: 8px;
+        color: var(--gray-10,#a8a8a8);
+        font-family: "ReemKufi400";
+        line-height: 100%;
+        font-size: 14px;
+       }
+       .gameid__content {
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: #fff;
+        font-family: "ReemKufi400";
+        line-height: 100%;
+        height: 14px;
+       }
+    }
+    .social__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-height: 415px;
+     .social__content--box{
+        width: 100%;
+        height: 64px;
+        border-radius: 8px;
+        background-color: #00002a;
+        background: repeating-radial-gradient();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        &.please__add {
+            justify-content: center;
+            align-items: center;
+            color: #ffae02;
+            cursor: pointer;
+        }
+     }
+    }
+    .social__social{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex: 2;
+        img {
+            width: 33.7px;
+            height: 26.7px;
+        }
+    }
+    .social__text--box{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .social-name{
+            font-size: 14px;
+            font-family: "ReemKufi500";
+            line-height: 100%;
+            color: #fff;
+        }
+        .social-email{
+            color: var(--gray-10,#a8a8a8);
+            font-size: 12px;
+            font-family: "ReemKufi400";
+            line-break: 100%;
+        }
+    }
+    .social__button--box{
+        display: flex;
+        gap : 16px;
+    }
+    .edit-button{
+        font-family: "ReemKufi500";
+        font-size: 14px;
+        color: var(--cd-4-de-2,#5698d2);
+        display: flex;
+        align-items: center;
+        background: transparent;
+        cursor: pointer;
+    }
+    .delete-button {
+        color : #FF2929;
+        font-size: 14px;
+        font-family: "ReemKufi500";
+        line-height: 100%;
+        background: transparent;
+    }
+    .add-button {
+        color: #FFF;
+        font-size: 14px;
+        font-family: "ReemKufi500";
+        line-height: 100%;
+        background-color: transparent;
+        height: 50px;
+    }
+    .gameid__btn--box {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-top: 22px;
+    }
+}

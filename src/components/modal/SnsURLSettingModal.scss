@@ -1,0 +1,95 @@
+.adddiscord-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .adddiscord-modal__box {
+            width: 400px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #0c0c35;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            position: relative;
+            .adddiscord-box__close {
+                position: absolute;
+                width: fit-content;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+              img {
+                width: 20px;
+                margin-left: auto;
+              }
+            }
+            .adddiscord-box__header {
+                border-bottom: 1px solid #232364;
+                margin-bottom: 16px;
+                padding-bottom: 16px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+                    img {
+                        width: 33.684px;
+                        height: 26.667px;
+                    }
+                    .header__text {
+                        font-size: 24px;
+                        font-family: "ReemKufi500";
+                        line-height: 100%;
+                    }
+            }
+            .discription__text{
+                text-align: center;
+                width: 100%;
+                font-family: "ReemKufi500";
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+            .URL-input__box {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+                margin-bottom: 12px;
+                .input__name {
+                    color: #a8a8a8;
+                    font-size: 14px;
+                    font-family: "ReemKufi500";
+                    line-height: 100%;
+                    width: 100%;
+                }
+                .warning-text {
+                    color: red;
+                    font-size: 12px;
+                    line-height: 100%;
+                }
+            }
+            .ok-button {
+                width: 100%;
+                border-radius: 8px;
+                color: #FFF;
+                background-color: #353598;
+                padding: 12px 8px;
+                text-align: center;
+                cursor: pointer;
+                line-height: 100%;
+                &.disabled-button {
+                    color: gray;
+                    cursor: default;
+                    background-color: #3535987b;
+                }
+            }
+    }
+}

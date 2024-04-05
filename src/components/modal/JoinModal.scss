@@ -1,0 +1,93 @@
+
+
+
+.join-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .join-modal__box {
+        width: 400px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #0c0c35;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        position: relative;
+        
+        .join-modal__box--close{
+            position: absolute;
+                width: fit-content;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+              img {
+                width: 20px;
+                margin-left: auto;
+              }
+        }
+
+        .join-content{
+            width: 100%;
+            text-align: center;
+            .join-content__message {
+                margin-bottom: 24px;
+                font-size: 14px;
+                font-family: "ReemKufi400";
+            }
+            .join-content__btn--box {
+                width: 100%;
+                display: flex;
+                gap: 16px;
+                justify-content: center;
+                .join-content__btn {
+                    width: 50%;
+                    color: #FFF;
+                    height: 38px;
+                    border-radius: 8px;
+                    line-height: 100%;
+                    font-size: 14px;
+                    font-family: "ReemKufi500";
+                    background-color: transparent;
+                    &.cancel {
+                        border: 1px solid #353598;
+                    }
+                    &.ok {
+                        background-color: #353598;
+                    }
+                }
+            }
+        }
+        .error-content{
+            width: 100%;
+            text-align: center;
+            .error-content__message {
+                width: 336px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+            .error-content__btn {
+                width: 100%;
+                color: #FFF;
+                height: 38px;
+                border-radius: 8px;
+                line-height: 100%;
+                font-size: 14px;
+                font-family: "ReemKufi500";
+                background-color: #353598;
+            }
+        }
+    }
+}

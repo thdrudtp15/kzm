@@ -1,0 +1,130 @@
+
+
+.koz-compact-nft-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .koz-modal__box {
+        padding: 24px 24px;
+        width: 100%;
+        max-width: 320px;
+        background-color: #0c0c35;
+        border-radius: 8px;
+        box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.40);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .koz-modal__title {
+            font-family: "ReemKufi500";
+            line-height: 100%;
+            font-size: 16px;
+            color: #FFF;
+        }
+        .koz-modal__information--box {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .koz-modal__token--box {
+            background-color: #000;
+            width: 100%;
+            height: 32px;
+            display: flex;
+            padding: 0px 12px;
+            align-items: center;
+            gap: 8px;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+            .token__text {
+                font-size: 14px;
+                font-family: "ReemKufi500";
+                line-height: 100%;
+                color: #FFF;
+            }
+        }
+        .koz-modal__input--box {
+            border: 1px solid #d3d3d3;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #000;
+            width: 100%;
+            padding: 0px 16px;
+            gap: 4px;
+            .koz-modal__input {
+                background-color: transparent;
+                width: 100%;
+                font-size: 14px;
+                font-family: "ReemKufi500";
+                line-height: 100%;
+            }
+            .EA {
+                font-family: "ReemKufi400";
+                color: #DBDBDB;
+                font-size: 14px;
+            }
+        }
+        .koz-modal__btn--box {
+            width: 100%;
+            display: flex;
+            gap: 8px;
+            .btn {
+                width: 50%;
+                border-radius: 8px;
+                color: #FFF;
+                padding: 12px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+             &.cancel {
+                border: 1px solid #353598;
+                background-color: transparent;
+             }
+             &.ok {
+                background-color: #353598;
+             }
+            }
+
+        }
+         
+    }
+    .fw500{
+        font-family: "ReemKufi500";
+        line-height: 100%;
+    }
+    .fw400 {
+        font-family: "ReemKufi400";
+        line-height: 100%;
+    }
+    .fs16 {
+        font-size: 16px;
+    }
+    .fs14 {
+        font-size: 14px;
+    }
+    .mb16 {
+        margin-bottom: 16px;
+    }
+    .mb8 {
+        margin-bottom: 8px;
+    }
+    .color-white {
+        color: #FFF;
+    }
+    .color-gray {
+        color: #DBDBDB;
+    }
+    .color-yellow {
+        color: #FFDA02;
+    }
+}

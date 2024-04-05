@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "ReemKufi400";
+  src: url("./assets/fonts/ReemKufi400.ttf");
+}
+@font-face {
+  font-family: "ReemKufi500";
+  src: url("./assets/fonts/ReemKufi500.ttf");
+}
+@font-face {
+  font-family: "ReemKufi600";
+  src: url("./assets/fonts/ReemKufi600.ttf");
+}
+@font-face {
+  font-family: "ReemKufi700";
+  src: url("./assets/fonts/ReemKufi700.ttf");
+}
+@font-face {
+  font-family: "aero700";
+  src: url("./assets/fonts/aero700.ttf");
+}
+@font-face {
+  font-family: "aero400";
+  src: url("./assets/fonts/aero400.ttf");
+}
+@font-face {
+  font-family: "montserrat300";
+  src: url("./assets/fonts/Montserrat300.ttf");
+}
+@font-face {
+  font-family: "montserrat400";
+  src: url("./assets/fonts/Montserrat400.ttf");
+}
+@font-face {
+  font-family: "montserrat500";
+  src: url("./assets/fonts/Montserrat500.ttf");
+}
+@font-face {
+  font-family: "montserrat600";
+  src: url("./assets/fonts/Montserrat600.ttf");
+}
+@font-face {
+  font-family: "montserrat700";
+  src: url("./assets/fonts/Montserrat700.ttf");
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  text-decoration: none;
+  font-family: "ReemKufi400";
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*:focus {
+  outline: 0;
+  outline: none;
+}
+ul {
+  list-style: none;
+}
+
+th {
+  font-weight: normal;
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  appearance: none;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+img {
+  display: block;
+}

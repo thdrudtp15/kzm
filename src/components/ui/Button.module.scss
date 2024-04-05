@@ -1,0 +1,135 @@
+
+@mixin Width-Height($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+
+.Common__button__outter {
+    // transition: all 0.4s;
+    background: rgba(0,0,0,0.35);
+    padding: 3px;
+
+    .Common__button__inner_0 {
+        @include Width-Height(100%,100%);
+        padding: 5px;
+        .Common__button__inner_1 {
+            @include Width-Height(100%,100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 0px 1px 5px rgba(136, 13, 13, 0.20), 0px 3px 4px rgba(123, 12, 12, 0.12), 0px 2px 4px rgba(91, 26, 26, 0.14);
+            white-space: nowrap;
+        }
+    }
+}
+//==========YELLOW
+
+.Common__button__inner_0_bg_yellow {
+    background: linear-gradient(rgb(255, 223, 0),rgb(240, 134, 5) );
+    background-blend-mode: soft-light, normal;
+}
+
+.Common__button__inner_1_bg_yellow {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #f9ab00;
+    background-blend-mode: soft-light, normal;
+}
+
+
+//===========RED
+
+.Common__button__inner_0_bg_red {
+    background: linear-gradient(rgb(239, 0, 0),rgb(182, 0, 0));
+    background-blend-mode: soft-light, normal;
+}
+
+.Common__button__inner_1_bg_red {
+    background: linear-gradient(rgb(194, 0, 0), rgb(219, 0, 0));
+    background-blend-mode: soft-light, normal;
+}
+
+
+//===========GRAY
+.Common__button__inner_0_bg_gray {
+    background: linear-gradient(rgb(178, 178, 178),rgb(88, 88, 88) );
+    background-blend-mode: soft-light, normal;
+
+}
+.Common__button__inner_1_bg_gray {
+    text-shadow: none !important;
+    color: #404040;
+    background: linear-gradient(rgb(131, 131, 131),rgb(128, 128, 128) );
+    background-blend-mode: soft-light, normal;
+}
+
+
+//===========BLUE
+.Common__button__inner_0_bg_blue {
+    background: linear-gradient(#5252d2,#1717c493);
+    background-blend-mode: soft-light, normal;
+
+}
+.Common__button__inner_1_bg_blue {
+    background: linear-gradient(#3131ab,#5252d2 );
+    background-blend-mode: soft-light, normal;
+}
+
+
+//===========PURPLE
+.Common__button__inner_0_bg_purple {
+    background: linear-gradient(#8338b5,#b14bf59d );
+    background-blend-mode: soft-light, normal;
+
+}
+.Common__button__inner_1_bg_purple {
+    background: linear-gradient(#b14bf59d,#8338b5 );
+    background-blend-mode: soft-light, normal;
+}
+
+//============PINK
+.Common__button__inner_0_bg_pink {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #FFC6AD;
+    background-blend-mode: soft-light, normal;
+}
+.Common__button__inner_1_bg_pink {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.50) 100%), #FFC6AD;
+    background-blend-mode: soft-light, normal;
+    color: black;
+    text-shadow: none !important;
+}
+
+//============GREEN
+.Common__button__inner_0_bg_green {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #8BD269;
+    background-blend-mode: soft-light, normal;
+
+}
+.Common__button__inner_1_bg_green {
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.50) 100%), #8BD269;
+    background-blend-mode: soft-light, normal;
+    color: black;
+    text-shadow: none !important;
+}
+
+//============BLACK
+.Common__button__inner_0_bg_black {
+    // background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.00) 100%), #0C0C35;
+    background: linear-gradient(rgb(23, 17, 76),rgb(10, 7, 32));
+    background-blend-mode: soft-light, normal;
+
+}
+.Common__button__inner_1_bg_black {
+    // background: linear-gradient(360deg, rgba(0, 0, 0, 0.25) 0%, rgba(255, 255, 255, 0.50) 100%), #0C0C35;
+    background: linear-gradient(rgb(10, 7, 30),rgba(42, 40, 58, 0.247));
+    background-blend-mode: soft-light, normal;
+}
+
+
+//===============추가적으로 붙힐 클래스들을 여기 적어주시면 됩니다 ex) 좌표 이동 등등...
+.All {
+    transform: translateX(0%);
+}
+.Connected {
+    transform: translateX(100%);
+}
+
